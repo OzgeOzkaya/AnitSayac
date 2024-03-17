@@ -59,23 +59,23 @@ def scrape_femicide_data(page_url: str) -> pd.DataFrame:
 
                 for line in body_text:
                     if 'Tarih:' in line:
-                        incident_data['Tarih'] = line.split(': ')[1].strip()
+                        incident_data['Tarih'] = line.split(':')[1].strip()
                     elif 'Maktülün yaşı:' in line:
-                        incident_data['Maktülün yaşı'] = line.split(': ')[1].strip()
+                        incident_data['Maktülün yaşı'] = line.split(':')[1].strip()
                     elif 'İl/ilçe:' in line:
-                        incident_data['İl/ilçe'] = line.split(': ')[1].strip()
+                        incident_data['İl/ilçe'] = line.split(':')[1].strip()
                     elif 'Neden öldürüldü:' in line:
-                        incident_data['Neden öldürüldü'] = line.split(': ')[1].strip()
+                        incident_data['Neden öldürüldü'] = line.split(':')[1].strip()
                     elif 'Kim tarafından öldürüldü:' in line:
-                        incident_data['Kim tarafından öldürüldü'] = line.split(': ')[1].strip()
+                        incident_data['Kim tarafından öldürüldü'] = line.split(':')[1].strip()
                     elif 'Korunma talebi:' in line:
-                        incident_data['Korunma talebi'] = line.split(': ')[1].strip()
+                        incident_data['Korunma talebi'] = line.split(':')[1].strip()
                     elif 'Öldürülme şekli:' in line:
-                        incident_data['Öldürülme şekli'] = line.split(': ')[1].strip()
+                        incident_data['Öldürülme şekli'] = line.split(':')[1].strip()
                     elif 'Failin durumu:' in line:
-                        incident_data['Failin durumu'] = line.split(': ')[1].strip()
+                        incident_data['Failin durumu'] = line.split(':')[1].strip()
                     elif 'Kaynak:' in line:
-                        incident_data['Kaynak'] = line.split(': ')[1].strip()
+                        incident_data['Kaynak'] = line.split(':')[1].strip()
 
                 records.append(incident_data)
 
